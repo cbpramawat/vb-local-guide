@@ -1,0 +1,11 @@
+# Cloudflare Worker config. Used by Cloudflare's "Import a repository" (no laptop
+# needed) or by `npx wrangler deploy` if you have a computer.
+# Secrets (XAI_API_KEY, TWILIO_AUTH_TOKEN) are NOT stored here. Add them in the
+# Cloudflare dashboard: Worker > Settings > Variables and Secrets.
+name = "vb-local-guide-sms"
+main = "src/worker.js"
+compatibility_date = "2025-10-01"
+
+[vars]
+XAI_MODEL = "grok-4.20-0309-non-reasoning"
+MAX_REPLY_CHARS = "450"

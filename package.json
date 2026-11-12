@@ -1,0 +1,11 @@
+{
+  "name": "vb-local-guide",
+  "private": true,
+  "type": "module",
+  "description": "Phone-first Virginia Beach local guide: text a question, get an answer.",
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "simulate": "node scripts/simulate.mjs"
+  },
+  "engines": { "node": ">=20" }
+}
