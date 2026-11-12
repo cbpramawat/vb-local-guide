@@ -2,6 +2,8 @@
 
 An open-source AI local guide for Virginia Beach and Hampton Roads residents.
 
+**Phone-first:** most people don't have a laptop, so the guide works by plain text message. Text a question to the guide's number and get a short answer back, with the official source to check. It works on any phone, with no app and no data plan needed.
+
 ## Why this exists
 
 Finding clear answers about city services, permits, events, and everyday life in Virginia Beach often means digging through several websites or waiting on hold. This project builds a friendly, accurate AI assistant that helps residents figure out the next step, and points them to the official source when it matters.
@@ -26,8 +28,16 @@ Everything here, including the prompts, the test questions, and the evaluation n
 | --- | --- |
 | `prompts/system-prompt.md` | The core instructions the AI guide runs on |
 | `examples/test-questions.md` | Real local questions used to test and improve answers |
+| `src/worker.js` | The text-message bot: receives a text through Twilio, asks Grok, and texts back an answer (Cloudflare Worker) |
+| `docs/sms-setup.md` | Step-by-step setup you can do entirely from a phone browser |
+| `docs/privacy-and-terms.md` | Text-message terms, opt-out (STOP), and privacy notice |
+| `scripts/simulate.mjs`, `test/` | Try the bot or run tests without a phone number |
 
 ## How to try it
+
+**By text message:** once a number is live, text it any Virginia Beach question. Reply HELP for info or STOP to opt out. To run your own number, follow [docs/sms-setup.md](docs/sms-setup.md).
+
+**In any AI chat app:**
 
 1. Open Grok (or any AI chat tool).
 2. Paste the contents of `prompts/system-prompt.md` as the first message or custom instructions.
@@ -47,7 +57,9 @@ Everyone in the 757 is welcome, technical or not.
 - [ ] Test and refine the system prompt against them
 - [ ] Add topic guides (beach parking, trash and recycling, flooding, small business startup)
 - [ ] Explore a veteran and military-family resource version
-- [ ] Run the guide through the Grok API for a simple public demo
+- [x] Text-message (SMS) demo through the Grok API (`src/worker.js`)
+- [ ] Get the toll-free number verified so anyone can text it
+- [ ] Make a flyer with a QR code that opens a text to the number
 
 ## License
 

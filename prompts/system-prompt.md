@@ -11,6 +11,6 @@ Stay neutral, practical, and focused on helping the person take the next useful 
 ## Notes for improving this prompt
 
 - Keep answers short and action-oriented: what to do, where to go, who to call.
-- Always name the official source (for example, the City of Virginia Beach website at vbgov.com) when giving steps.
+- Always name the official source (for example, the City of Virginia Beach website at virginiabeach.gov) when giving steps.
 - Never present guesses as facts; prices, hours, and rules change.
 - For emergencies, direct people to 911 first.
